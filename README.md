@@ -18,8 +18,9 @@ Local trajectory optimization methods, such as model predictive control (MPC), c
 This paper proposes to learn, via deep Reinforcement Learning (RL), an interaction-aware policy that provides long-term guidance to the local planner. In particular, in simulations with cooperative and non-cooperative agents, we train a deep network to recommend a subgoal for the MPC planner. The recommended subgoal is expected to help the robot in making progress towards its goal and accounts for the expected interaction with other agents. Based on the recommended subgoal, the MPC planner then optimizes the inputs for the robot satisfying its kinodynamic and collision avoidance constraints.
 Our approach is shown to substantially improve the navigation performance in terms of
 number of collisions as compared to prior MPC frameworks, and in terms of both travel time and number of collisions compared to deep RL methods in cooperative, competitive and mixed multiagent scenarios.
+
 <div align='center'>
-<img src="images/paper.png"></img>
+<img src="figs/072_MPCRLPolicy_10agents.gif"></img>
 </div>
 
 If you find this code useful in your research then please cite
