@@ -4,7 +4,7 @@
 
 This repository will contain the code for the paper:
 
-**<a href="https://arxiv.org/abs/1803.10892">Where to go next: Learning a Subgoal Recommendation Policy for Navigation Among Pedestrians</a>**
+**<a href="https://arxiv.org/pdf/2102.13073.pdf">Where to go next: Learning a Subgoal Recommendation Policy for Navigation Among Pedestrians</a>**
 <br>
 <a href="http://www.tudelft.nl/staff/bruno.debrito/">Bruno Brito</a>,
 <a href="http://mfe.mit.edu/">Michael Everett</a>,
