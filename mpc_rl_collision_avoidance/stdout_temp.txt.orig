@@ -1,0 +1,12 @@
+
+OPTIMAL (within EQTOL=1.0e-06, INEQTOL=1.0e-06, STATTOL=1.0e-05, COMPTOL=1.0e-06).
+<<<<<<< HEAD:mpc_rl_collision_avoidance/stdout_temp.txt.orig
+<<<<<<< HEAD
+Solve time: 0.702 ms (31 iterations)
+=======
+Solve time: 0.802 ms (35 iterations)
+>>>>>>> 5e7f0fa6be13bc8b18cf95c8d6bc47edaafc1a87
+=======
+Solve time: 0.642 ms (30 iterations)
+>>>>>>> bf2137a93f06614a5a35b5950e00e60cd3717349:mpc_rl_collision_avoidance/stdout_temp.txt
+

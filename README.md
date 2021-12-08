@@ -33,3 +33,70 @@ If you find this code useful in your research then please cite
   publisher={IEEE}
 }
 ```
+
+This is a pre-release of the code used for the publication above. Please note that this code was not cleanup or fully tested yet. We plan to make a cleanup release soon. Moreover, for the training algorithm we heavily rely on **<a href="https://stable-baselines.readthedocs.io/en/master/">StableBaselines 2.0</a>**.
+
+Installation
+========================
+
+Grab the simulation environment from github, initialize submodules, install dependencies and src code:
+
+```
+    git clone --recursive --branch ral2021 https://github.com/bbrito/gym-collision-avoidance.git
+    cd gym-collision-avoidance
+    ./install.sh
+```
+
+Download the GO-MPC source code:
+
+```
+    git clone https://github.com/tud-amr/go-mpc.git
+```
+
+Generate the MPC solver using Matlab. You will need a ForcesPro license to generate the solver. You can request it here **<a href="https://www.embotech.com/products/forcespro/licensing/">FORCESPRO</a>**. 
+Once you get the solver license:
+```
+    Go to the directory  <go-mpc directoy>/mpc_rl_collision_avoidance/mpc
+    Run scenario.m
+```
+
+Start training:
+```
+    source <gym-collision-avoidance directory>/venv/bin/activate
+    cd <go-mpc directoy>
+    python setup.py install
+    python train.py
+```
+
+To test the trained network do:
+```
+    cd <go-mpc directoy>
+    ./test.sh
+```
+
+To download a pre-trained model do:
+```
+    cd <go-mpc directoy>
+    mkdir logs/ppo2-mpc 
+    ./download_trained_models.sh
+```
+
+All the training parameters such as reward function, scenarios used for training and network policy are defined in the following two files:
+```
+    <go-mpc directoy>/mpc_rl_collision_avoidance/hyperparams/ppo2-mpc.yml
+    <gym-collision-avoidance directory>/gym_collision_avoidance/envs/config.py
+```
+
+The main GO-MPC traning algorithm is defined in:
+```
+    <go-mpc directoy>/mpc_rl_collision_avoidance/algorithms/ppo2/ppo2mpc.py
+```
+
+The network policy is defined with the name MlpLstmPolicy and is defined in:
+```
+    <go-mpc directoy>/mpc_rl_collision_avoidance/external/stable_baselines/common/policies.py
+```
+The LSTM dynamic layer in:
+```
+    <go-mpc directoy>/mpc_rl_collision_avoidance/external/stable_baselines/common/tf_layers.py
+```
