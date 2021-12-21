@@ -74,7 +74,7 @@ model.xinitidx = 4:8; % use this to specify on which variables initial condition
 %% Define solver options
 codeoptions = getOptions('FORCESNLPsolver');
 codeoptions.maxit = 500;   % Maximum number of iterations
-codeoptions.printlevel = 1 ; % Use printlevel = 2 to print progress (but not for timings)
+codeoptions.printlevel = 0 ; % Use printlevel = 1 to print minimal progress, use printlevel = 2 to print progress (but not for timings)
 codeoptions.optlevel = 3;   % 0: no optimization, 1: optimize for size, 2: optimize for speed, 3: optimize for size & speed
 codeoptions.timing = 1;
 codeoptions.overwrite = 1;
